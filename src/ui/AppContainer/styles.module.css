@@ -1,0 +1,20 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem;
+  text-align: center;
+  grid-auto-columns: minmax(0, 1fr);
+}
+
+@media only screen and (min-width: 800px) {
+  .container {
+    grid-template-areas:
+      /* 'headline1 headline2 area-table-chart area-table-chart' */
+      'calculator calculator rating rating'
+      'radial-bar radial-bar paged-table paged-table'
+      'footer footer footer footer';
+  }
+}
